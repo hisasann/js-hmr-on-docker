@@ -18,4 +18,4 @@ EXPOSE 4567
 
 WORKDIR /src
 
-CMD ["yarn", "build:dev"]
+CMD ["npm", "run", "build:dev"]
