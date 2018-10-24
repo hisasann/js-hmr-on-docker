@@ -1,0 +1,23 @@
+{
+  "name": "js-hmr-on-docker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "docker-compose up --build",
+    "dev:clean": "docker-compose build --no-cache && docker-compose up",
+    "build:dev": "cross-env NODE_ENV=development webpack --config webpack.config.js",
+    "start:dev": "cross-env NODE_ENV=development webpack-dev-server --hot --inline",
+    "prune": "npm run container-prune && npm run image-prune && npm run system-prune",
+    "container-prune": "docker container prune",
+    "image-prune": "docker image prune",
+    "system-prune": "docker system prune",
+    "stats": "docker container stats"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "webpack": "^4.23.0",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  }
+}
