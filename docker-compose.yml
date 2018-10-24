@@ -8,7 +8,7 @@ services:
     ports:
      - $WEB_APP_PORT:$WEB_APP_PORT
     volumes:
-     - .\app:/src/app
+     - ./app:/src/app
      # - C:\Users\yhisamatsu\_\js-code\js-hmr-on-docker\app:/src/app
      # The volume is effectively hiding node_modules from the host and must be in this order
 #     - node_modules:/src/node_modules
