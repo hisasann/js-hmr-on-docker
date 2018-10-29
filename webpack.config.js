@@ -22,6 +22,18 @@ module.exports = {
   // Source maps support ('inline-source-map' also works)
   devtool: 'source-map',
 
+  module: {
+    rules: [
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader"
+        }
+      }
+    ]
+  },
+
   plugins: [
   ],
 

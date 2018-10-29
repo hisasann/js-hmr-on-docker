@@ -9,6 +9,7 @@ ADD ./app /src/app/
 # Install app dependencies
 COPY package.json /src/package.json
 COPY yarn.lock /src/yarn.lock
+COPY .babelrc /src/.babelrc
 COPY webpack.config.js /src/webpack.config.js
 COPY ./dist/index.html /src/dist/index.html
 
