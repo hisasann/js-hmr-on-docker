@@ -10,7 +10,7 @@ services:
     volumes:
      - ./app:/src/app
      # The volume is effectively hiding node_modules from the host and must be in this order
-     - ./node_modules:/src/node_modules
+#     - ./node_modules:/src/node_modules
     command: yarn start:dev
 
 #volumes:
